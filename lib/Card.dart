@@ -9,7 +9,7 @@ class CardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: Color.fromARGB(255, 8, 4, 56),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -17,54 +17,73 @@ class CardPage extends StatelessWidget {
           children: <Widget>[
             CircleAvatar(
               radius: 70.0,
-              backgroundImage: AssetImage("images/minhaz.jpg"),
+              backgroundImage: AssetImage("images/card.png"),
             ),
             Text(
               "Minhazul Islam",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 30,
-                  fontFamily: "arial",
+                  fontSize: 45,
+                  fontFamily: 'Pacifico',
                   fontWeight: FontWeight.w800),
             ),
             Text(
               "Industrial Engineer",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
-                  fontFamily: "",
+                  fontSize: 30,
+                  letterSpacing: 2.5,
+                  fontFamily: 'Sans',
                   fontStyle: FontStyle.italic),
             ),
-            Container(
-              height: 35,
-              width: 280,
-              margin: EdgeInsets.only(top: 15, bottom: 15),
+            Card(
+              margin: EdgeInsets.only(top: 15, bottom: 15,right: 30, left: 30),
               color: Colors.white,
-              alignment: Alignment.center,
-              child: Text(
-                "+8801-907072158",
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Color.fromARGB(255, 16, 15, 61)),
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Row(
+                children: <Widget>[
+                Icon(
+                  Icons.phone,
+                  color: Color.fromARGB(255, 26, 22, 72),
+                ),
+                SizedBox(width: 20,),
+                Text(
+                  "+8801907072158",
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Color.fromARGB(255, 18, 18, 62)),
+                )
+              ]),
               ),
+              
             ),
-            Container(
-              width: 280,
-              height: 35,
-              alignment: Alignment.center,
+            Card(
+              margin: EdgeInsets.only(top: 15, bottom: 15,right: 30, left: 30),
               color: Colors.white,
-              child: Text(
-                "minhaz74692@gmail.com",
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Color.fromARGB(255, 16, 15, 61)),
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Row(
+                children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Color.fromARGB(255, 26, 22, 72),
+                ),
+                SizedBox(width: 20,),
+                Text(
+                  "minhaz74692@gmail.com",
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Color.fromARGB(255, 18, 18, 62)),
+                )
+              ]),
               ),
             ),
             SizedBox(
               width: double.infinity,
-            )
+            ),
           ],
         ),
       ),
